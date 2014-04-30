@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="./Bootstrap.php" colors="true" verbose="true">
+    <testsuites>
+        <testsuite name="Labs Image Test Suite">
+            <directory>./LabsTest</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory>./../src/</directory>
+            <directory>./../config/</directory>
+            <directory>./../view/</directory>
+            <exclude>
+                <directory>vendor/</directory>
+                <directory>tests/</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>

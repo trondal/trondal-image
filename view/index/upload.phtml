@@ -1,0 +1,23 @@
+<?php
+
+$url = $this->url('image/iupload', array(), array(), true);
+$form->setAttribute('action', $url)->prepare();
+
+$fileElement = $form->get('image-file');
+
+echo $this->form()->openTag($form);
+echo $this->formFile($fileElement);
+echo $this->formElementErrors($fileElement);
+echo $this->formSubmit($form->get('submit'));
+echo $this->form()->closeTag();
+
+echo '<br/>';
+
+echo '<ol>';
+foreach ($this->fileNames as $fileName) {
+    $previewUrl = $this->url('image/iview', array('id' => $fileName), array(), true);
+    echo '<li><a href="'. $previewUrl.'">Preview</a></li>';
+
+    $deleteUrl = $this->url('image/idelete', array('id' => $fileName), array(), true);
+    echo '<a href="'.$deleteUrl.'">Delete</delete>';
+}

@@ -1,0 +1,25 @@
+{
+    "name": "labs/labs-image",
+    "type": "library",
+    "description": "Labs Image Module",
+    "keywords": ["Labs", "Image"],
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Trond Albinussen",
+            "email": "trond@boost.no"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Labs\\Image\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.3.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    }
+}
